@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>SQR App by Harshit</title>
+		<style>
+			* { font-size:50px; }
+			body { background-color : pink;} 
+
+		</style>
+	</head>
+
+	<body>
+		<center>
+		<h1>SQR App</h1>
+		
+		<form onSubmit="find()">
+			<input type = "number" step ="any" placeholder="Enter number" id = "num"/>
+			<br/><br/>
+			<input type = "submit" value = "Find Square" />
+
+
+
+		</form>
+
+
+		
+		<h2 id="msg"></h2>
+
+		<script>
+			function find()
+			{
+			event.preventDefault();
+			let num = document.getElementById("num");
+			let msg = document.getElementById("msg");
+			
+			let n = parseFloat(num.value);
+			let r = n*n;
+			let a = "The square is "+r;
+			msg.innerHTML = a;
+			}
+
+
+		</script>
+		</center>
+	</body>
+</html>
